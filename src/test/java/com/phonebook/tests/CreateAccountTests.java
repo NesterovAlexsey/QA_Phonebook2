@@ -20,24 +20,13 @@ public class CreateAccountTests extends TestBase {
     //click on Login link
     click((By.cssSelector("[href='/login']")));
     //enter email field
-    type();
+    type(By.cssSelector("[placeholder='Email']"), "alex2@gmail.com");
     //enter password
-    driver.findElement(By.cssSelector("[placeholder='Password']")).click();
-    driver.findElement(By.cssSelector("[placeholder='Password']")).clear();
-    driver.findElement(By.cssSelector("[placeholder='Password']")).sendKeys("Word212345$");
+    type(By.cssSelector("[placeholder='Password']"), "Word212345$");
     // click on registration button
-    driver.findElement(By.name("registration")).click();
+    click(By.name("registration"));
     //assert Sign out button is displayed
     Assert.assertTrue(isElementPresent(By.xpath("//button[.='Sign Out']")));
   }
 
-  public void type() {
-    driver.findElement(By.cssSelector("[placeholder='Email']")).click();
-    driver.findElement(By.cssSelector("[placeholder='Email']")).clear();
-    driver.findElement(By.cssSelector("[placeholder='Email']")).sendKeys("alex2@gmail.com");
-  }
-
-  public void click(By locator) {
-    driver.findElement(locator);
-  }
 }
