@@ -10,9 +10,13 @@ public class CreateAccountTests extends TestBase {
   //precondition: user should be logged out
   @BeforeMethod
   public void ensurePrecondition() {
-    if (!isElementPresent(By.cssSelector("[href='/login']"))) {
+    if (!isLoginLinkPresent()) {
       driver.findElement(By.xpath("//button[.='Sign Out']")).click();
     }
+  }
+
+  public boolean isLoginLinkPresent() {
+    return isElementPresent(By.cssSelector("[href='/login']"));
   }
 
   @Test
