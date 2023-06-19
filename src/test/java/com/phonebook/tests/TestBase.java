@@ -1,10 +1,13 @@
 package com.phonebook.tests;
 
 import java.time.Duration;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -60,5 +63,18 @@ public class TestBase {
 
   public void click(By locator) {
     driver.findElement(locator).click();
+  }
+
+  public boolean isAlertPresent() {
+    Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20))
+        .until(ExpectedConditions.alertIsPresent());
+
+    if (alert == null) {
+      return false;
+    } else {
+      driver.switchTo().alert();
+      alert.accept();
+      return true;
+    }
   }
 }

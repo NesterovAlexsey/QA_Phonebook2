@@ -16,7 +16,7 @@ public class CreateAccountTests extends TestBase {
   }
 
   @Test
-  public void newUserRegistrationPositiveTest() {
+  public void existedUserRegistrationNegativeTest() {
     //click on Login link
     click((By.cssSelector("[href='/login']")));
     //enter email field
@@ -26,7 +26,7 @@ public class CreateAccountTests extends TestBase {
     // click on registration button
     click(By.name("registration"));
     //assert Sign out button is displayed
-    Assert.assertTrue(isElementPresent(By.xpath("//button[.='Sign Out']")));
+    Assert.assertTrue(isAlertPresent());
   }
 
 }
