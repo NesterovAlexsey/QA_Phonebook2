@@ -136,4 +136,17 @@ public class TestBase {
     }
     return false;
   }
+
+  public void openContactForm(String nameOfCard) {
+    List<WebElement> contacts = driver.findElements(By.cssSelector("h2"));
+    for (WebElement element : contacts) {
+      if (element.getText().contains(nameOfCard)) {
+        element.click();
+      }
+    }
+  }
+
+  public void clickOnRemoveButton() {
+    driver.findElement(By.xpath("//button[.='Remove']")).click();
+  }
 }
