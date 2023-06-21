@@ -6,21 +6,20 @@ import org.testng.annotations.Test;
 
 public class CreateAccountTests extends TestBase {
 
-  //precondition: user should be logged out
   @BeforeMethod
   public void ensurePrecondition() {
-    if (!app.isLoginLinkPresent()) {
-      app.clickOnSignOutButton();
+    if (!app.getUser().isLoginLinkPresent()) {
+      app.getUser().clickOnSignOutButton();
     }
   }
 
   @Test
   public void existedUserRegistrationNegativeTest() {
-    app.clickOnLoginLink();
-    app.fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
-    app.clickOnRegistrationButton();
+    app.getUser().clickOnLoginLink();
+    app.getUser().fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
+    app.getUser().clickOnRegistrationButton();
 
-    Assert.assertTrue(app.isAlertPresent());
+    Assert.assertTrue(app.getUser().isAlertPresent());
   }
 
 }
