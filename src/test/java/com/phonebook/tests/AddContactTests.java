@@ -9,18 +9,18 @@ public class AddContactTests extends TestBase{
 
   @BeforeMethod
   public void ensurePrecondition() {
-    if (!isLoginLinkPresent()) {
-      clickOnSignOutButton();
+    if (!app.isLoginLinkPresent()) {
+      app.clickOnSignOutButton();
     }
-    clickOnLoginLink();
-    fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
-    clickOnLoginButton();
+    app.clickOnLoginLink();
+    app.fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
+    app.clickOnLoginButton();
   }
 
   @Test
   public void addContactPositiveTest() {
-    clickOnAddLink();
-    fillAddContactForm(
+    app.clickOnAddLink();
+    app.fillAddContactForm(
         new Contact()
             .setName("Alex")
             .setLastname("Nestor")
@@ -29,14 +29,14 @@ public class AddContactTests extends TestBase{
             .setAddress("Paris")
             .setDesc("must visit that guy")
     );
-    clickOnSaveButton();
+    app.clickOnSaveButton();
 
-    Assert.assertTrue(isContactCreated("Alex"));
+    Assert.assertTrue(app.isContactCreated("Alex"));
   }
 
   @AfterMethod
   public void deleteContactForm() {
-    openContactForm("Alex");
-    clickOnRemoveButton();
+    app.openContactForm("Alex");
+    app.clickOnRemoveButton();
   }
 }

@@ -7,25 +7,25 @@ import org.testng.annotations.Test;
 public class LoginTests extends TestBase{
   @BeforeMethod
   public void ensurePrecondition() {
-    if (!isLoginLinkPresent()) {
-      clickOnSignOutButton();
+    if (!app.isLoginLinkPresent()) {
+      app.clickOnSignOutButton();
     }
   }
 
   @Test
   public void loginPositiveTest() {
-    clickOnLoginLink();
-    fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
-    clickOnLoginButton();
+    app.clickOnLoginLink();
+    app.fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com").setPassword("Word212345$"));
+    app.clickOnLoginButton();
 
-    Assert.assertTrue(isSignOutButtonPresent());
+    Assert.assertTrue(app.isSignOutButtonPresent());
   }
   @Test
   public void loginNegativeWithoutPasswordTest() {
-    clickOnLoginLink();
-    fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com"));
-    clickOnLoginButton();
+    app.clickOnLoginLink();
+    app.fillLoginRegistrationForm(new User().setEmail("alex2@gmail.com"));
+    app.clickOnLoginButton();
 
-    Assert.assertTrue(isAlertPresent());
+    Assert.assertTrue(app.isAlertPresent());
   }
 }
