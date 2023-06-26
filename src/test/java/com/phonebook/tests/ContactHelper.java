@@ -48,9 +48,6 @@ public class ContactHelper extends BaseHelper{
 
   public boolean findElementAfterRemove(String nameOfCard) {
     List<WebElement> contacts = driver.findElements(By.cssSelector("h2"));
-    if (contacts.isEmpty()) {
-      return true;
-    }
     for (WebElement element : contacts) {
       if (element.getText().contains(nameOfCard)) {
         return false;
