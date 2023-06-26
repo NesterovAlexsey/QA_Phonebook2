@@ -1,4 +1,4 @@
-package com.phonebook.tests;
+package com.phonebook.fw;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class ApplicationManager {
 
   String browser;
-  WebDriver driver;
+  public WebDriver driver;
 
   public ApplicationManager(String browser) {
     this.browser = browser;

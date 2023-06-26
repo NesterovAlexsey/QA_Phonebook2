@@ -1,5 +1,6 @@
-package com.phonebook.tests;
+package com.phonebook.fw;
 
+import com.phonebook.model.Contact;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -61,5 +62,12 @@ public class ContactHelper extends BaseHelper{
 
   public void clickOnRemoveButton() {
     click(By.xpath("//button[contains(text(),'Remove')]"));
+  }
+
+  public int sizeOfContacts() {
+    if (isElementPresent(By.cssSelector(".contact-item_card__2SOIM"))) {
+      return driver.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
+    }
+    return 0;
   }
 }

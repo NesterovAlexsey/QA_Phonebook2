@@ -1,5 +1,6 @@
 package com.phonebook.tests;
 
+import com.phonebook.fw.ApplicationManager;
 import org.openqa.selenium.remote.Browser;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
