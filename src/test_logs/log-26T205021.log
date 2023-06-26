@@ -1,0 +1,9 @@
+2367 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\AIT TR Student\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+8071 [main] INFO  com.phonebook.tests.TestBase -- Stop test loginNegativeWithoutPasswordTestwith data: []
+10266 [main] INFO  com.phonebook.tests.TestBase -- PASSED: loginNegativeWithoutPasswordTest
+10267 [main] INFO  com.phonebook.tests.TestBase -- ==========================
+10286 [main] INFO  com.phonebook.tests.TestBase -- Stop test loginPositiveTestwith data: []
+11731 [main] INFO  com.phonebook.tests.TestBase -- PASSED: loginPositiveTest
+11732 [main] INFO  com.phonebook.tests.TestBase -- ==========================

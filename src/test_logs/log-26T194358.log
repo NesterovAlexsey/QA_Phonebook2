@@ -1,0 +1,18 @@
+2383 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\AIT TR Student\qa\QA_Phonebook2\src\test\resources\regr.xml
+
+8943 [main] INFO  com.phonebook.tests.TestBase -- Start test openHomePageTest
+9010 [main] INFO  com.phonebook.tests.TestBase -- Stop test openHomePageTest
+9011 [main] INFO  com.phonebook.tests.TestBase -- ==========================
+9021 [main] INFO  com.phonebook.tests.TestBase -- Start test existedUserRegistrationNegativeTest
+11248 [main] INFO  com.phonebook.tests.TestBase -- Stop test existedUserRegistrationNegativeTest
+11248 [main] INFO  com.phonebook.tests.TestBase -- ==========================
+11255 [main] INFO  com.phonebook.tests.TestBase -- Start test loginPositiveTest
+12532 [main] INFO  com.phonebook.tests.TestBase -- Stop test loginPositiveTest
+12532 [main] INFO  com.phonebook.tests.TestBase -- ==========================
+12535 [main] INFO  com.phonebook.tests.TestBase -- Start test addContactPositiveTest
+27859 [main] INFO  com.phonebook.tests.TestBase -- Stop test addContactPositiveTest
+27859 [main] INFO  com.phonebook.tests.TestBase -- ==========================
+27861 [main] INFO  com.phonebook.tests.TestBase -- Start test removeContactTest
+42840 [main] INFO  com.phonebook.tests.TestBase -- Stop test removeContactTest
+42840 [main] INFO  com.phonebook.tests.TestBase -- ==========================
