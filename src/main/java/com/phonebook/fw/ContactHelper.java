@@ -70,4 +70,13 @@ public class ContactHelper extends BaseHelper{
     }
     return 0;
   }
+
+  public void cleanAllContactFrom() {
+    if (sizeOfContacts() != 0) {
+      for (int i = 0; i < sizeOfContacts(); i++) {
+        click(By.cssSelector(".contact-item_card__2SOIM"));
+        clickOnRemoveButton();
+      }
+    }
+  }
 }

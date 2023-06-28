@@ -29,24 +29,24 @@ public class AddContactTests extends TestBase {
     app.getUser().clickOnLoginButton();
   }
 
-//  @Test
-//  public void addContactPositiveTest() {
-//    app.getContact().clickOnAddLink();
-//    app.getContact().fillAddContactForm(
-//        new Contact()
-//            .setName("Alex")
-//            .setLastname("Nestor")
-//            .setPhone("1234567890")
-//            .setEmail("weiseguy@gm.com")
-//            .setAddress("Paris")
-//            .setDesc("must visit that guy")
-//    );
-//    app.getContact().clickOnSaveButton();
-//
-//    Assert.assertTrue(app.getContact().isContactCreated("Alex"));
-//  }
+  @Test(enabled = false)
+  public void addContactPositiveTest() {
+    app.getContact().clickOnAddLink();
+    app.getContact().fillAddContactForm(
+        new Contact()
+            .setName("Alex")
+            .setLastname("Nestor")
+            .setPhone("1234567890")
+            .setEmail("weiseguy@gm.com")
+            .setAddress("Paris")
+            .setDesc("must visit that guy")
+    );
+    app.getContact().clickOnSaveButton();
 
-  @Test(dataProvider = "addContact",dataProviderClass = DataProviders.class)
+    Assert.assertTrue(app.getContact().isContactCreated("Alex"));
+  }
+
+  @Test(enabled = false, dataProvider = "addContact",dataProviderClass = DataProviders.class)
   public void addContactPositiveFromDataProviderTest(
       String name, String lastName, String phone, String email, String address,
       String description) {
@@ -74,11 +74,15 @@ public class AddContactTests extends TestBase {
     app.getContact().clickOnSaveButton();
   }
 
-//  @AfterMethod
-//  public void deleteContactForm() {
-//    app.getContact().openContactForm("Alex");
-//    app.getContact().clickOnRemoveButton();
-//  }
+  @AfterMethod(enabled = false)
+  public void deleteContactForm() {
+    app.getContact().openContactForm("Alex");
+    app.getContact().clickOnRemoveButton();
+  }
 
-
+  @AfterMethod
+  public void cleanContactFrom() {
+    app.getContact().cleanAllContactFrom();
+  }
 }
+
