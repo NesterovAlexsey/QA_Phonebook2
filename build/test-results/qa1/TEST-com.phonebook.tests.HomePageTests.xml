@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.HomePageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-28T16:27:51" hostname="DESKTOP-OS617JJ" time="0.055">
+  <properties/>
+  <testcase name="openHomePageTest" classname="com.phonebook.tests.HomePageTests" time="0.055"/>
+  <system-out><![CDATA[18:27:51.967 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test openHomePageTestwith data: []
+18:27:52.036 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: openHomePageTest
+18:27:52.036 [Test worker] INFO  com.phonebook.tests.TestBase -- ==========================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

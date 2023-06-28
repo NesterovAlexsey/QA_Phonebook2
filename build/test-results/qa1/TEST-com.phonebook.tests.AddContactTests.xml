@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.AddContactTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-06-28T16:28:06" hostname="DESKTOP-OS617JJ" time="52.353">
+  <properties/>
+  <testcase name="addContactNegativeIncorrectPhone[0](Contact{name='First', phone='1234'})" classname="com.phonebook.tests.AddContactTests" time="4.94"/>
+  <testcase name="addContactNegativeIncorrectPhone[1](Contact{name='Second', phone='123456789012345678'})" classname="com.phonebook.tests.AddContactTests" time="2.433"/>
+  <testcase name="addContactNegativeIncorrectPhone[2](Contact{name='Third', phone='phonetest'})" classname="com.phonebook.tests.AddContactTests" time="2.262"/>
+  <system-out><![CDATA[18:27:54.555 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test addContactNegativeIncorrectPhonewith data: [Contact{name='First', phone='1234'}]
+18:28:21.746 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactNegativeIncorrectPhone
+18:28:21.746 [Test worker] INFO  com.phonebook.tests.TestBase -- ==========================
+18:28:21.749 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test addContactNegativeIncorrectPhonewith data: [Contact{name='Second', phone='123456789012345678'}]
+18:28:46.056 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactNegativeIncorrectPhone
+18:28:46.056 [Test worker] INFO  com.phonebook.tests.TestBase -- ==========================
+18:28:46.058 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test addContactNegativeIncorrectPhonewith data: [Contact{name='Third', phone='phonetest'}]
+18:29:09.134 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactNegativeIncorrectPhone
+18:29:09.134 [Test worker] INFO  com.phonebook.tests.TestBase -- ==========================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
