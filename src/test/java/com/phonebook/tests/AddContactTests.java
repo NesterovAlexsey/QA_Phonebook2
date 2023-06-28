@@ -74,6 +74,15 @@ public class AddContactTests extends TestBase {
     app.getContact().clickOnSaveButton();
   }
 
+  @Test(dataProvider = "addContactsIncorrectPhone",dataProviderClass = DataProviders.class)
+  public void addContactNegativeIncorrectPhone(Contact contact) {
+    app.getContact().clickOnAddLink();
+    app.getContact().fillAddContactForm(contact);
+    app.getContact().clickOnSaveButton();
+
+    Assert.assertTrue(app.getUser().isAlertPresent());
+  }
+
   @AfterMethod(enabled = false)
   public void deleteContactForm() {
     app.getContact().openContactForm("Alex");
